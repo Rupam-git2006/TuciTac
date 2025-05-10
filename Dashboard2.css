@@ -157,12 +157,13 @@ body {
  /* Profile Card */
  .rounded-circle {
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: absolute;
 }
 
 .profile-img {
     width: 100px;
     height: 100px;
+    position:relative;
     margin-bottom: 1rem;
 }
 
