@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Dashboard2.css">
+</head>
+<body>
+
+
+
+    <!-- nav bar -->
+    <nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="navbar-brand">RFID Attendance</a>
+        
+        <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item">
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a href="profile.html" class="nav-link">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<!-- CarD Section -->
+ <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle profile-img" alt="Profile">
+                    <h5 id="userName">Rupam Samanta</h5>
+                        <p class="text-muted" id="userEmail">Rupam@gmail.com</p>
+                        <p class="text-muted" id="userRFID">RFID: 1234567890</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- card -->
+        <div class="col-mod-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Recent Attendance</h5> 
+                </div> 
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time In</th>
+                                        <th>Time Out</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="attendanceTable">
+                                    <tr>
+                                        <td>2025-06-15</td>
+                                        <td>08:15 AM</td>
+                                        <td>05:30 PM</td>
+                                        <td><span class="status status-present">Present</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-14</td>
+                                        <td>09:20 AM</td>
+                                        <td>05:25 PM</td>
+                                        <td><span class="status status-late">Late</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-06-13</td>
+                                        <td>******</td>
+                                        <td>******</td>
+                                        <td><span class="status status-absent">Absent</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="btn btn-primary" id="exportBtn">
+                            <i class="fas fa-download"></i> Export Records
+                        </button>
+                    </div>
+                 
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <script src="Dashboard2.js"></script>
+</body>
+</html>
